@@ -26,8 +26,8 @@
 
         .top-bar {
             width: 100%;
-            background: #ff91af;
-            color: #fff;
+            background: #fff;
+            color: #f45793;
             padding: 10px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
@@ -39,45 +39,61 @@
             z-index: 1000;
         }
 
+        .top-bar .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .top-bar .logo-container img {
+            height: 40px; 
+            width: auto;
+        }
+
         .top-bar .club-name {
             font-size: 1.5em;
             font-weight: bold;
             font-family: Arial, Arial, Helvetica, sans-serif;
         }
+        
 
         .top-bar nav {
             display: flex;
             gap: 20px;
         }
 
-        .top-bar nav a {
+        .top-bar nav a, .top-bar nav b {
             text-decoration: none;
-            color: #fff;
+            color: #f45793;
             font-size: 1em;
             transition: color 0.3s ease;
-            font-family: Arial, Arial, Helvetica, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
         .top-bar nav b {
-            text-decoration: none;
-            color: #6a859b;
-            font-size: 1em;
-            transition: color 0.3s ease;
-            font-family: Arial, Arial, Helvetica, sans-serif;
+            color: #cc346e;
         }
 
         .top-bar nav a:hover {
-            color: #cbd7e1;
+            color: #c74778;
+        }
+
+        .top-bar nav a:hover {
+            color: #c74778;
         }
 
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <div class="club-name">Northeastern Women In Pre-Law</div>
+        <div class="logo-container">
+            <img src="neulaw.png" alt="Club Logo">
+            <div class="club-name">Northeastern Women In Pre-Law</div>
+        </div>
         <nav>
             <b href="index.html">about</b>
             <a href="#projects">events</a>
-            <b href="#contact.html">contact</b>
+            <a href="#contact.html">contact</a>
         </nav>
     </div>
 
