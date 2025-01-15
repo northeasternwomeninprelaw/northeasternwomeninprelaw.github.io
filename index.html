@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family:Arial, Helvetica, sans-serif;
             background: 'background-color:white';
             color: #333;
             line-height: 1.6;
@@ -29,37 +29,31 @@
             background: #fff;
             color: #f45793;
             padding: 10px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            position: fixed;
-            top: 0;
+            justify-content: center;
+     
             left: 0;
             z-index: 1000;
-        }
+        }   
 
-        .top-bar .logo-container {
+        .top-bar {
             display: flex;
             align-items: center;
-            gap: 10px;
+;
         }
 
-        .top-bar .logo-container img {
-            height: 40px; 
+        .top-bar img {
+            height: 140px; 
             width: auto;
+            align-items: center;
+            justify-content: center;
         }
-
-        .top-bar .club-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            font-family: Arial, Arial, Helvetica, sans-serif;
-        }
-        
 
         .top-bar nav {
             display: flex;
-            gap: 20px;
+            top: 20;
+            gap: 40px;
         }
 
         .top-bar nav a, .top-bar nav b {
@@ -82,18 +76,82 @@
             color: #c74778;
         }
 
+        .title {
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .title h1 {
+            font-size: 2em;
+            color: #f45793;
+            font-family:'Times New Roman', Times, serif;
+        }
+
+        .side-by-side-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .box {
+            flex: 1;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .box h2 {
+            font-size: 1em;
+            color: #000000;
+        }
+
+        .box p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <div class="logo-container">
-            <div class="club-name">Northeastern Women In Pre-Law</div>
-        </div>
+        <img src="neulaw.png" alt="Club Logo">
+    </div>
+    <div class="top-bar">
         <nav>
-            <b href="index.html">about</b>
-            <a href="#projects">events</a>
-            <a href="#contact.html">contact</a>
+            <b href="index.html">HOME</b>
+            <a href="join.html">HOW TO JOIN</a>
+            <a href="eboard.html">MEET THE EBOARD</a>
+            <a href="calendar.html">CALENDAR</a>
+            <a href="contact.html">CONTACT US</a>
+            <a href="faq.html">FAQ</a>
+            <a href="resources.html">RESOURCES</a>
         </nav>
+    </div>
+
+    <div class="title">
+        <h1>About Women In Pre-Law Society at Northeastern University</h1>
+    </div>
+
+    <div class="side-by-side-container">
+        <div class="box">
+            <h2>ABOUT US</h2>
+            <p>
+                info info info info info info info info info info info info info info info 
+                info info info info info info info info info info info info
+            </p>
+        </div>
+        <div class="box">
+            <h2>OUR GOAL</h2>
+            <p>
+                goals goal goals goals goals goals goal goals goals goals goals goal goals goals goals
+            </p>
+        </div>
     </div>
 
 </body>
