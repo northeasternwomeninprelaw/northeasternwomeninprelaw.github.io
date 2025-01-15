@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>my portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -12,7 +16,7 @@
         }
 
         body {
-            font-family:Arial, Helvetica, sans-serif;
+            font-family: "Roboto", serif;
             background: 'background-color:white';
             color: #333;
             line-height: 1.6;
@@ -44,7 +48,7 @@
         }
 
         .top-bar img {
-            height: 140px; 
+            height: 160px; 
             width: auto;
             align-items: center;
             justify-content: center;
@@ -61,7 +65,6 @@
             color: #f45793;
             font-size: 1em;
             transition: color 0.3s ease;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         .top-bar nav b {
@@ -85,7 +88,7 @@
         .title h1 {
             font-size: 2em;
             color: #f45793;
-            font-family:'Times New Roman', Times, serif;
+            font-family: "Quicksand", serif;
         }
 
         .side-by-side-container {
@@ -107,7 +110,7 @@
         }
 
         .box h2 {
-            font-size: 1em;
+            font-size: 1.2em;
             color: #000000;
         }
 
@@ -116,11 +119,67 @@
             color: #555;
             line-height: 1.6;
         }
+
+        .social-section {
+            text-align: center;
+            padding: 20px;
+            background: #fff;
+            width: 90%;
+        }
+
+        .social-section h3 {
+            font-size: 1.5em;
+            color: #f45793;
+            margin-bottom: 15px;
+        }
+
+        .social-section .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-section .social-icons a {
+            text-decoration: none;
+        }
+
+        .social-section .social-icons img {
+            height: 40px;
+            width: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-section .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        .center-container {
+            display: center;
+            gap: 5px;
+            justify-content: center;
+            text-align: center;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .center-container h2 {
+            font-size: 1.2em;
+            color: #000000;
+        }
+
+        .center-container p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+
+    </style>
     </style>
 </head>
 <body>
     <div class="top-bar">
-        <img src="neulawlogo.png" alt="Club Logo">
+        <img src="neulaw.png" alt="Club Logo">
     </div>
     <div class="top-bar">
         <nav>
@@ -138,6 +197,13 @@
         <h1>About Women In Pre-Law Society at Northeastern University</h1>
     </div>
 
+    <div class="center-container">
+        <h3>Other Info?</h3>
+        <p>words and information, words and information, words and information, words and information, 
+            words and information, words and information, words and information, words and information.
+        </p>
+    </div>
+
     <div class="side-by-side-container">
         <div class="box">
             <h2>ABOUT US</h2>
@@ -153,6 +219,21 @@
             </p>
         </div>
     </div>
+
+    <div class="social-section">
+        <h3>Follow Our Socials</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/women.inprelaw/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/58/Instagram-Icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/women-in-pre-law/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
 
 </body>
 </html>
