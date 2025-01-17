@@ -39,48 +39,61 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: center;
-     
-            left: 0;
+            justify-content: space-between; /* Adjust spacing */
+            position: sticky; /* Stick the top bar on scroll */
+            top: 0; /* Stick at the top of the viewport */
             z-index: 1000;
-        }   
-
-        .top-bar {
-            display: flex;
-            align-items: center;
-;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
         }
-
+        
         .top-bar img {
-            height: 160px; 
+            height: 100px; 
             width: auto;
-            align-items: center;
-            justify-content: center;
         }
-
+        
         .top-bar nav {
             display: flex;
-            top: 20;
-            gap: 40px;
+            gap: 20px;
         }
-
-        .top-bar nav a, .top-bar nav b {
+        
+        .top-bar nav a,
+        .top-bar nav b {
             text-decoration: none;
             color: #f45793;
             font-size: 1em;
             transition: color 0.3s ease;
         }
 
-        .top-bar nav b {
-            color: #cc346e;
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .top-bar img {
+                height: 80px; 
+            }
+        
+            .top-bar nav {
+                flex-direction: column; 
+                gap: 10px; 
+            }
+        
+            .top-bar nav a,
+            .top-bar nav b {
+                font-size: 0.9em;
+            }
         }
 
-        .top-bar nav a:hover {
-            color: #c74778;
-        }
-
-        .top-bar nav a:hover {
-            color: #c74778;
+        @media (max-width: 480px) {
+            .top-bar img {
+                height: 60px; 
+            }
+        
+            .top-bar nav a,
+            .top-bar nav b {
+                font-size: 0.8em; 
+            }
         }
 
         .title {
