@@ -6,3 +6,4 @@ TODO:
 
 - make .htaccess actually work
 - add content
+- organize pages
