@@ -38,24 +38,27 @@
             color: #f45793;
             padding: 10px 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between; /* Adjust spacing */
-            position: sticky; /* Stick the top bar on scroll */
-            top: 0; /* Stick at the top of the viewport */
+            justify-content: center;
+            position: sticky;
+            top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        
+
         .top-bar img {
-            height: 100px; 
+            height: 100px;
             width: auto;
         }
-        
+
         .top-bar nav {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            align-items: center;
         }
-        
+
         .top-bar nav a,
         .top-bar nav b {
             text-decoration: none;
@@ -66,19 +69,18 @@
 
         @media (max-width: 768px) {
             .top-bar {
-                flex-direction: column;
-                text-align: center;
+                padding: 10px 10px;
             }
-        
+
             .top-bar img {
-                height: 80px; 
+                height: 80px;
             }
-        
+
             .top-bar nav {
-                flex-direction: column; 
-                gap: 10px; 
+                flex-wrap: wrap;
+                gap: 15px;
             }
-        
+
             .top-bar nav a,
             .top-bar nav b {
                 font-size: 0.9em;
@@ -86,13 +88,22 @@
         }
 
         @media (max-width: 480px) {
-            .top-bar img {
-                height: 60px; 
+            .top-bar {
+                padding: 5px 10px;
             }
-        
+
+            .top-bar img {
+                height: 60px;
+            }
+
+            .top-bar nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
             .top-bar nav a,
             .top-bar nav b {
-                font-size: 0.8em; 
+                font-size: 0.8em;
             }
         }
 
