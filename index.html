@@ -11,240 +11,137 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Yellowtail&display=swap" rel="stylesheet">
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Roboto", serif;
-            background: 'background-color:white';
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-        }
-
-        .top-bar {
-            width: 100%;
-            background: #fff;
-            color: #f45793;
-            padding: 10px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .top-bar img {
-            height: 100px;
-            width: auto;
-        }
-
-        .top-bar nav {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .top-bar nav a,
-        .top-bar nav b {
-            text-decoration: none;
-            color: #f45793;
-            font-size: 1em;
-            transition: color 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .top-bar {
-                padding: 10px 10px;
-            }
-
-            .top-bar img {
-                height: 80px;
-            }
-
-            .top-bar nav {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-
-            .top-bar nav a,
-            .top-bar nav b {
-                font-size: 0.9em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .top-bar {
-                padding: 5px 10px;
-            }
-
-            .top-bar img {
-                height: 60px;
-            }
-
-            .top-bar nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .top-bar nav a,
-            .top-bar nav b {
-                font-size: 0.8em;
-            }
-        }
-
-        .title {
-            padding: 20px;
-            text-align: center;
-            background: #fff;
-        }
-
-        .title h1 {
-            font-size: 2.5em;
-            color: #f45793;
-            font-family: "Yellowtail", serif;
-        }
-
-        .side-by-side-container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            align-items: flex-start;
-            width: 90%;
-            max-width: 1200px;
-        }
-
-        .box {
-            flex: 1;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            max-width: 600px;
-            text-align: center;
-        }
-
-        .box h2 {
-            font-size: 1.2em;
-            color: #000000;
-        }
-
-        .box p {
-            font-size: 1em;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .social-section {
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            width: 90%;
-        }
-
-        .social-section h3 {
-            font-size: 1.5em;
-            color: #f45793;
-            margin-bottom: 15px;
-        }
-
-        .social-section .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .social-section .social-icons a {
-            text-decoration: none;
-        }
-
-        .social-section .social-icons img {
-            height: 40px;
-            width: 40px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-section .social-icons img:hover {
-            transform: scale(1.2);
-        }
-
-        .center-container {
-            display: center;
-            gap: 5px;
-            justify-content: center;
-            text-align: center;
-            width: 90%;
-            max-width: 1000px;
-        }
-
-        .center-container h2 {
-            font-size: 1.2em;
-            color: #000000;
-        }
-
-        .center-container p {
-            font-size: 1em;
-            color: #555;
-            line-height: 1.6;
-        }
-
-
-    </style>
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
+    
     <div class="top-bar">
-        <img src="neulawlogo.png" alt="Club Logo">
-    </div>
-    <div class="top-bar">
+        <img src="images/neulawlogo.png" alt="Club Logo">
+        <div class="title">
+            <h1>Women In Pre-Law Society at Northeastern University</h1>
+        </div>
         <nav>
-            <b href="index">HOME</b>
-            <a href="join">HOW TO JOIN</a>
-            <a href="eboard">MEET THE EBOARD</a>
-            <a href="calendar">CALENDAR</a>
-            <a href="contact">CONTACT US</a>
-            <a href="faq.html">FAQ+RESOURCES</a>
+            <a href="#about">ABOUT</a>
+            <a href="#join">HOW TO JOIN</a>
+            <a href="#eboard">MEET THE EBOARD</a>
+            <a href="#calendar">CALENDAR</a>
+            <a href="#contact">CONTACT US</a>
+            <a href="#faq">FAQ</a>
         </nav>
     </div>
 
-    <div class="title">
-        <h1>About Women In Pre-Law Society at Northeastern University</h1>
-    </div>
 
-    <div class="center-container">
-        <h3>Other Info?</h3>
-        <p>words and information, words and information, words and information, words and information, 
-            words and information, words and information, words and information, words and information.
-        </p>
-    </div>
 
-    <div class="side-by-side-container">
-        <div class="box">
-            <h2>ABOUT US</h2>
-            <p>
-                info info info info info info info info info info info info info info info 
-                info info info info info info info info info info info info
-            </p>
+    <section id="about">
+        <h1>OUR MISSION</h1>
+        <p>The Women in Pre-Law Society is dedicated to creating a welcoming, supportive, and empowering community 
+            for undergraduate women at Northeastern University who are interested in exploring the field of law. 
+            Our inclusive environment ensures that there are no barriers to entry, allowing all members to connect 
+            with like-minded individuals, access valuable resources, and grow personally and professionally. 
+            Through networking, academic support, and career development opportunities, we aim to inspire and 
+            prepare our members for their legal aspirations.</p>
+    </section>
+
+    <section id="join">
+        <h1>HOW TO JOIN</h1>
+        <p>Women in Pre-Law is open to all undergraduate women at Northeastern University who are interested 
+            in pursuing a career in law! To join, simply register using the form linked below and attend our meetings. 
+            Join the slack channel and mailing list to stay updated! </p>
+            <div class="button-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0qjHSXvBkOn77IlkP6rGuQPcdm38widqTC79SZmM6g0v5bQ/viewform?usp=sharing" class="button">Form</a>
+                <a href="https://linktr.ee/northeasternwomeninprelaw" class="button">LinkTree</a>
+            </div>
+    </section>
+
+    <section id="eboard">
+        <h1>EBOARD</h1>
+        <div class="team-members">
+            <div class="team-member">
+                
+                <h3>Nadia Daly</h3>
+                <h2>PRESIDENT</h2>
+                <p><strong>Major:</strong> Criminology and Criminal Justice</p>
+                <p><strong>Minors:</strong> Argumentation & Law, Law & Public Policy, Music Industry</p>
+                <p><strong>Interests:</strong> Intellectual Property and Entertainment Law</p>
+            </div>
+            <div class="team-member">
+                <h3>Sarah Murphy</h3>
+                <h2>VICE PRESIDENT</h2>
+                <p><strong>Major:</strong> Criminology and Criminal Justice</p>
+                <p><strong>Minor:</strong> Law & Public Policy</p>
+                <p><strong>Interests:</strong> Public Interest Law</p>
+            </div>
+            <div class="team-member">
+                <h3>Grace Cowell</h3>
+                <h2>SECRETARY</h2>
+                <p><strong>Major:</strong> Criminal Justice and Political Science</p>
+                <p><strong>Interests:</strong> Civil Rights Law</p>
+            </div>
+            <div class="team-member">
+                <h3>Gloria Sanchez</h3>
+                <h2>MARKETING</h2>
+                <p><strong>Major:</strong> Criminal Justice and Political Science</p>
+                <p><strong>Minor:</strong> Law & Public Policy</p>
+                <p><strong>Interests:</strong> Corporate/Tech and Family Law</p>
+            </div>
+            <div class="team-member">
+                <h3>Grace Ferretti</h3>
+                <h2>TREASURER</h2>
+                <p><strong>Major:</strong> Business Administration with Concentration in Finance</p>
+                <p><strong>Minor:</strong> Law & Public Policy</p>
+                <p><strong>Interests:</strong> Still figuring it out!</p>
+            </div>
         </div>
-        <div class="box">
-            <h2>OUR GOAL</h2>
-            <p>
-                goals goal goals goals goals goals goal goals goals goals goals goal goals goals goals
-            </p>
+    </section>
+    
+    <section id="calendar">
+        <h1>CALENDAR</h1>
+        <p>Stay Tuned!</p>
+    </section>
+
+    <section id="contact">
+        <h1>CONTACT US</h1>
+        <p><strong>Email: </strong>northeasternwomeninprelaw@gmail.com</p>
+        <p><strong>New Members: </strong>Join the slack through the LinkTree link above</p>
+    </section>
+    
+    <section id="faq">
+        
+        <h1>FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="faq-item">
+            <button class="faq-question">Can I join even if I don’t know if I’m going to law school post grad?</button>
+            <div class="faq-answer">
+                <p>Yes! Law school or not, as long as you have an interest in a career in law, you are welcome to join!</p>
+            </div>
         </div>
-    </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I join at any point in the semester?</button>
+            <div class="faq-answer">
+                <p>Yes! We have a rolling membership system. You can join at any point during the year by filling out the form under “how to join”</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How much are membership dues?</button>
+            <div class="faq-answer">
+                <p>Women in Pre-Law is free for all members</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How do I join the slack and mailing list?</button>
+            <div class="faq-answer">
+                <p>Check out our linktree!</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Can I be a woman in pre-law even if I’m not in Boston because of co-op?</button>
+            <div class="faq-answer">
+                <p>Yes! Fill out our remote member form to have remote access to our meetings.</p>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/script.js"></script>
+    
 
     <div class="social-section">
         <h3>Follow Our Socials</h3>
