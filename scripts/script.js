@@ -8,3 +8,12 @@ faqButtons.forEach(button => {
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+window.addEventListener('scroll', function() {
+    const topBar = document.querySelector('.top-bar');
+    if (window.scrollY > 50) {
+        topBar.classList.add('header-hidden');
+    } else {
+        topBar.classList.remove('header-hidden');
+    }
+});
