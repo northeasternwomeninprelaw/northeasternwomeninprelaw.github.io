@@ -120,6 +120,11 @@ img {
     .top-bar nav b {
         font-size: 0.8em;
     }
+    .title h1 {
+        font-size: 1em;
+        line-height: 1;
+        max-width: 75%;
+    }
 }
 
 .title {
