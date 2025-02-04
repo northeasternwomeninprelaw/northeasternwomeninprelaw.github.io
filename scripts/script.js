@@ -1,7 +1,6 @@
-// Get all the FAQ buttons
+// FAQ BUTTONS
 const faqButtons = document.querySelectorAll('.faq-question');
 
-// Add an event listener to each button
 faqButtons.forEach(button => {
     button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
@@ -9,6 +8,7 @@ faqButtons.forEach(button => {
     });
 });
 
+// Position and Spacing
 function updateNavBarPosition() {
     const title = document.getElementById("page-title");
     const navBar = document.getElementById("nav-bar");
@@ -34,5 +34,5 @@ window.addEventListener("resize", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    updateNavBarPosition(); // Initialize on load
+    updateNavBarPosition(); 
 });
