@@ -118,7 +118,7 @@ img {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .top-bar {
         padding: 7px 10px;
         top: 150px; 
@@ -126,6 +126,11 @@ img {
 
     .top-bar img {
         height: 60px;
+        
+    }
+
+    img {
+        margin-top: 60px;
     }
 
     .top-bar nav {

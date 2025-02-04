@@ -9,22 +9,30 @@ faqButtons.forEach(button => {
     });
 });
 
-let lastScrollTop = 0;
-const title = document.getElementById("page-title");
-const navBar = document.getElementById("nav-bar");
+function updateNavBarPosition() {
+    const title = document.getElementById("page-title");
+    const navBar = document.getElementById("nav-bar");
+    const titleHeight = title.offsetHeight;
+    
+    let scrollTop = window.scrollY;
+    let topPosition = title.classList.contains("hidden-title") ? "0" : `${titleHeight - 10}px`;
+    navBar.style.top = topPosition;
+}
 
 window.addEventListener("scroll", function() {
-    let scrollTop = window.scrollY;
-    let isSmallScreen = window.innerWidth <= 600;
-    let topPosition = isSmallScreen ? "150px" : "90px";
-
-    if (scrollTop > 50) {
+    const title = document.getElementById("page-title");
+    if (window.scrollY > 50) {
         title.classList.add("hidden-title");
-        navBar.style.top = "0"; // Moves navbar to the top
     } else {
         title.classList.remove("hidden-title");
-        navBar.style.top = topPosition; // Adjust top position based on screen size
     }
+    updateNavBarPosition();
+});
 
-    lastScrollTop = scrollTop;
+window.addEventListener("resize", function() {
+    updateNavBarPosition();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    updateNavBarPosition(); // Initialize on load
 });
