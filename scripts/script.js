@@ -15,13 +15,15 @@ const navBar = document.getElementById("nav-bar");
 
 window.addEventListener("scroll", function() {
     let scrollTop = window.scrollY;
+    let isSmallScreen = window.innerWidth <= 600;
+    let topPosition = isSmallScreen ? "150px" : "90px";
 
     if (scrollTop > 50) {
         title.classList.add("hidden-title");
         navBar.style.top = "0"; // Moves navbar to the top
     } else {
         title.classList.remove("hidden-title");
-        navBar.style.top = "90px"; // Moves navbar below title
+        navBar.style.top = topPosition; // Adjust top position based on screen size
     }
 
     lastScrollTop = scrollTop;
