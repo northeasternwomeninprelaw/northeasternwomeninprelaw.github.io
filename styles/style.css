@@ -131,7 +131,33 @@ img {
     }
 
     img {
-        margin-top: 80px;
+        margin-top: 70px;
+    }
+
+    .top-bar nav {
+        flex-direction:row;
+        gap: 10px;
+    }
+
+    .top-bar nav a,
+    .top-bar nav b {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 500px) {
+    .top-bar {
+        padding: 7px 10px;
+        top: 150px; 
+    }
+
+    .top-bar img {
+        height: 60px;
+        
+    }
+
+    img {
+        margin-top: 100px;
     }
 
     .top-bar nav {
