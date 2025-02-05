@@ -12,15 +12,17 @@ faqButtons.forEach(button => {
 function updateNavBarPosition() {
     const title = document.getElementById("page-title");
     const navBar = document.getElementById("nav-bar");
+    if (!title || !navBar) return;
+
     const titleHeight = title.offsetHeight;
-    
-    let scrollTop = window.scrollY;
-    let topPosition = title.classList.contains("hidden-title") ? "0" : `${titleHeight - 10}px`;
+    let topPosition = `${titleHeight}px`; // Set navbar directly below title
     navBar.style.top = topPosition;
 }
 
 window.addEventListener("scroll", function() {
     const title = document.getElementById("page-title");
+    if (!title) return;
+
     if (window.scrollY > 50) {
         title.classList.add("hidden-title");
     } else {
@@ -29,10 +31,6 @@ window.addEventListener("scroll", function() {
     updateNavBarPosition();
 });
 
-window.addEventListener("resize", function() {
-    updateNavBarPosition();
-});
+window.addEventListener("resize", updateNavBarPosition);
 
-document.addEventListener("DOMContentLoaded", function() {
-    updateNavBarPosition(); 
-});
+document.addEventListener("DOMContentLoaded", updateNavBarPosition);
