@@ -15,7 +15,7 @@ function updateNavBarPosition() {
     if (!title || !navBar) return;
 
     const titleHeight = title.offsetHeight;
-    let topPosition = `${titleHeight}px`; // Set navbar directly below title
+    let topPosition = `${titleHeight - 5}px`; // Set navbar directly below title
     navBar.style.top = topPosition;
 }
 
