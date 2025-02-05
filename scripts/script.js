@@ -29,10 +29,6 @@ window.addEventListener("scroll", function() {
     updateNavBarPosition();
 });
 
-window.addEventListener("resize", function() {
-    updateNavBarPosition();
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    updateNavBarPosition(); 
-});
+document.addEventListener("DOMContentLoaded", updateNavBarPosition);
+window.addEventListener("resize", updateNavBarPosition);
+window.addEventListener("orientationchange", updateNavBarPosition);
