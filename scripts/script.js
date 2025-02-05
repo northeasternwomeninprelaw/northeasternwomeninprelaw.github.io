@@ -19,7 +19,7 @@ function updateNavBarPosition() {
 
         // Place navbar right below the title
         navBar.style.position = "absolute";
-        navBar.style.top = `${title.offsetTop + titleHeight}px`;
+        navBar.style.top = `${title.offsetTop + titleHeight - 10}px`;
     });
 }
 
