@@ -148,6 +148,7 @@ img {
 @media (max-width: 500px) {
     .top-bar {
         padding: 7px 10px;
+        top:120px;
     }
 
     .top-bar img {
