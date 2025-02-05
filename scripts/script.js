@@ -1,26 +1,40 @@
 // FAQ BUTTONS
-const faqButtons = document.querySelectorAll('.faq-question');
-
-faqButtons.forEach(button => {
+document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
         answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
     });
 });
 
-// Position and Spacing
+// Position the navbar below the title
 function updateNavBarPosition() {
-    const title = document.getElementById("page-title");
-    const navBar = document.getElementById("nav-bar");
-    const titleHeight = title.offsetHeight;
-    
-    let scrollTop = window.scrollY;
-    let topPosition = title.classList.contains("hidden-title") ? "0" : `${titleHeight - 10}px`;
-    navBar.style.top = topPosition;
+    requestAnimationFrame(() => { 
+        const title = document.getElementById("page-title");
+        const navBar = document.getElementById("nav-bar");
+
+        if (!title || !navBar) return;
+
+        // Get accurate height, including mobile rendering quirks
+        const titleHeight = title.getBoundingClientRect().height;
+
+        // Place navbar right below the title
+        navBar.style.position = "absolute";
+        navBar.style.top = `${title.offsetTop + titleHeight}px`;
+    });
 }
 
-window.addEventListener("scroll", function() {
+window.addEventListener("load", function() {
+    setTimeout(updateNavBarPosition, 50); // Small delay for mobile rendering
+});
+
+window.addEventListener("resize", updateNavBarPosition);
+window.addEventListener("orientationchange", updateNavBarPosition);
+
+// Update navbar position on scroll
+window.addEventListener("scroll", function () {
     const title = document.getElementById("page-title");
+    if (!title) return;
+
     if (window.scrollY > 50) {
         title.classList.add("hidden-title");
     } else {
@@ -28,7 +42,3 @@ window.addEventListener("scroll", function() {
     }
     updateNavBarPosition();
 });
-
-document.addEventListener("DOMContentLoaded", updateNavBarPosition);
-window.addEventListener("resize", updateNavBarPosition);
-window.addEventListener("orientationchange", updateNavBarPosition);
