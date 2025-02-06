@@ -6,7 +6,7 @@ document.querySelectorAll('.faq-question').forEach(button => {
     });
 });
 
-// Position the navbar below the title
+// change nav bar position
 function updateNavBarPosition() {
     requestAnimationFrame(() => { 
         const title = document.getElementById("page-title");
@@ -14,31 +14,23 @@ function updateNavBarPosition() {
 
         if (!title || !navBar) return;
 
-        // Get accurate height, including mobile rendering quirks
-        const titleHeight = title.getBoundingClientRect().height;
-
-        // Place navbar right below the title
-        navBar.style.position = "absolute";
-        navBar.style.top = `${title.offsetTop + titleHeight - 10}px`;
+        if (window.scrollY > 50) {
+            navBar.style.position = "fixed";
+            navBar.style.top = "0";
+            navBar.style.width = "100%";
+            navBar.style.zIndex = "1000";
+            title.classList.add("hidden-title");
+        } else {
+            const titleHeight = title.getBoundingClientRect().height;
+            navBar.style.position = "absolute";
+            navBar.style.top = `${title.offsetTop + titleHeight - 10}px`;
+            title.classList.remove("hidden-title");
+        }
     });
 }
 
-window.addEventListener("load", function() {
-    setTimeout(updateNavBarPosition, 50); // Small delay for mobile rendering
-});
-
+window.addEventListener("load", updateNavBarPosition);
 window.addEventListener("resize", updateNavBarPosition);
 window.addEventListener("orientationchange", updateNavBarPosition);
+window.addEventListener("scroll", updateNavBarPosition);
 
-// Update navbar position on scroll
-window.addEventListener("scroll", function () {
-    const title = document.getElementById("page-title");
-    if (!title) return;
-
-    if (window.scrollY > 50) {
-        title.classList.add("hidden-title");
-    } else {
-        title.classList.remove("hidden-title");
-    }
-    updateNavBarPosition();
-});
