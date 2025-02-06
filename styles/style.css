@@ -242,6 +242,7 @@ body {
     height: 40px;
     width: 40px;
     transition: transform 0.3s ease;
+    margin-bottom: 50px;
 }
 
 .social-section .social-icons img:hover {
